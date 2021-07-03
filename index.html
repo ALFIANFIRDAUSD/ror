@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--BARU-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ 
+
+
+    <!-- INI-->
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="ico/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="ico/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="ico/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="ico/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="ico/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="ico/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="ico/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="ico/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="ico/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="ico/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="ico/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="ico/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="ico/mstile-310x310.png" />
+
+    <title>Website Monitoring Jamur</title>
+
+    <!-- Template CSS -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <link rel="stylesheet" href="./assets/css/style-starter.css">
+
+    <style>
+        .jumbotron {
+            background-image: url(jamur444.jpg);
+            background-size: cover;
+            background-position: fixed;
+            height: 550px;
+            margin-top: -50px;
+
+        }
+        body {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 40px 0;
+}
+h2 {
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    position: relative;
+    margin: 30px 0 60px;
+}
+h2::after {
+    content: "";
+    width: 140px;
+    position: absolute;
+    margin: 0 auto;
+    height: 3px;
+    background: #db584e;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    opacity: .8;
+}
+.col-center {
+    margin: 0 auto;
+    float: none !important;
+}
+.carousel {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+.carousel-item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 290px;
+}
+.carousel .item .img-box {
+    width: 135px;
+    height: 135px;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+.carousel .img-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+}
+.carousel .testimonial {
+    padding: 30px 0 10px;
+}
+.carousel .overview {   
+    font-style: italic;
+}
+.carousel .overview b {
+    text-transform: uppercase;
+    color: #db584e;
+}
+.carousel .carousel-control {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    background: none;
+}
+.carousel-control i {
+    font-size: 68px;
+    line-height: 42px;
+    position: absolute;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel .carousel-indicators {
+    bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 1px 3px;
+    border-radius: 50%;
+}
+.carousel-indicators li {   
+    background: #999;
+    border-color: transparent;
+    box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li.active {    
+    background: #555;       
+    box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+
+    
+    </style>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/8.6.2/firebase-app.js"></script>
+
+  <!-- Add the Performance Monitoring library -->
+  <script src="/__/firebase/8.6.2/firebase-performance.js"></script>
+
+<body class="sidebar-menu-collapsed">
+    <div class="se-pre-con"></div>
+    <section>
+        <!-- sidebar menu start -->
+        <div class="sidebar-menu sticky-sidebar-menu">
+
+            <!-- logo start -->
+            <div class="logo">
+                <h1><a href="index.html">Collective</a></h1>
+            </div>
+
+            <!-- if logo is image enable this -->
+            <!-- image logo --
+    <div class="logo">
+      <a href="index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" class="img-fluid" style="height:35px;" />
+      </a>
+    </div>
+    <!-- //image logo -->
+
+            <div class="logo-icon text-center">
+                <a href="index.html" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
+            </div>
+            <!-- //logo end -->
+
+            <div class="sidebar-menu-inner">
+
+                <!-- sidebar nav start -->
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                    <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+                    </li>
+                    <li><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
+
+                    <!-- //sidebar nav end -->
+                    <!-- toggle button start -->
+                    <a class="toggle-btn">
+                        <i class="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></i>
+                        <i class="fa fa-angle-double-right menu-collapsed__right"></i>
+                    </a>
+                    <!-- //toggle button end -->
+            </div>
+        </div>
+        <!-- //sidebar menu end -->
+        <!-- header-starts -->
+        <div class="header sticky-header">
+
+            <!-- notification menu start -->
+            <div class="menu-right">
+                <div class="navbar user-panel-top">
+                    <div class="user-dropdown-details d-flex">
+                        <div class="profile_details_left">
+                            <a class="navbar-brand text-dark font-weight-light" href="#"><img src="haha.png" style="width:180px;height:40px;position: relative;right: 85%;" ;>Monitoring Jamur Tiram Berbasis IoT</a>
+
+                            </ul>
+                            </li>
+                            </ul>
+                        </div>
+                        <div class="profile_details">
+                            <ul>
+                                <li class="dropdown profile_details_drop">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" aria-haspopup="true" aria-expanded="false">
+                                        <div class="profile_img">
+                                            <img src="assets/images/profileimg.jpg" class="rounded-circle" alt="" />
+                                            <div class="user-active">
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu drp-mnu" aria-labelledby="dropdownMenu3">
+                                        <li class="user-info">
+                                            <h5 class="user-name">Admin</h5>
+                                            <span class="status ml-2">Admin</span>
+                                        </li>
+                                        <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li> <li class="logout"> <button class="btn" onclick="signOut()"> 
+                                            <i class="fa fa-power-off"></i> Logout</button> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--notification menu end -->
+        </div>
+        <!-- //header-ends -->
+        <!-- main content start -->
+        <div class="main-content">
+            <!-- content -->
+            <div class="container-fluid content-top-gap">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb my-breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+
+                    </ol>
+                </nav>
+                <!--JUMBOTRON -->
+
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="text-light pt-5" id="container">
+                        
+                        <h1 class="display-4 pb-5">Selamat Datang !</h1>
+
+                        <h3 class=" uyy text-light">Di Website Monitoring & Penunjang Kualitas Tanaman Jamur Tiram Berbasis IoT.</h2>
+                        <hr class="my-4 ">
+                        <h4 class="lead text-light">Lahan Terpantau,Hasilnya WOW!</h4>
+                        <p class="lead"></p>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="welcome-msg pt-3 pb-4">
+                    <h1>Hi <span class="text-primary"></span>, Welcome back!</h1>
+
+                    </label>
+                </div>
+
+                <!-- statistics data -->
+                <div class="statistics">
+                    <div class="row">
+                        <div class="col-xl-6 pr-xl-2">
+                            <div class="row">
+                                <div class="col-sm-6 pr-sm-2 statistics-grid">
+                                    <div class="card card_border border-primary-top p-4">
+                                        <i class="lnr lnr-paperclip"> </i>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h3 class="text-dark number" id="truangan1">&deg;</h3>
+                                                <p class="stat-text">Suhu Ruangan 1</p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h3 class="text-dark number" id="truangan2">&deg;</h3>
+                                                <p class="stat-text">Suhu Ruangan 2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 pl-sm-2 statistics-grid">
+                                    <div class="card card_border border-primary-top p-4">
+                                        <i class="lnr lnr-cloud"> </i>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h3 class="text-dark number" id="kruangan1">&deg;</h3>
+                                                <p class="stat-text">Room Humidity 1</p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h3 class="text-dark number" id="kruangan2">&deg;</h3>
+                                                <p class="stat-text">Room Humidity 2</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 pl-xl-2">
+                            <div class="row">
+                                <div class="col-sm-6 pr-sm-2 statistics-grid">
+                                    <div class="card card_border border-primary-top p-4">
+                                        <i class="lnr lnr-drop"> </i>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h3 class="text-dark number" id="kmediatanam1">&deg;</h3>
+                                                <p class="stat-text">Kelembapan Media Tanam 1</p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h3 class="text-dark number" id="kmediatanam2">&deg;</h3>
+                                                <p class="stat-text">Kelembapan Media Tanam 2</p>
+                                            </div>
+                                        </div>
+                                        <!-- <h3 class="text-success number" id="kmediatanam"></h3>
+                                        <p id="bigOne" class="stat-text">Kelembapan Media Tanam</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 pl-sm-2 statistics-grid">
+
+                                    <div class="card card_border border-primary-top p-4">
+                                        <button onclick="on()" type="button" class="btn btn-md btn-warning btn-block">ON</button>
+                                        <button onclick="off()" type="button" class="btn btn-primary btn-block">OFF</button>
+                                        <i class="lnr "> </i>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //statistics data -->
+
+            <!-- charts -->
+            <div class="chart">
+                <div class="row">
+                    <div class="col-lg-6 pr-lg-2 chart-grid">
+                        <div class="card text-center card_border">
+                            <div class="card-header chart-grid__header text-dark">
+                                Kondisi Kelebapan Ruangan
+                            </div>
+                            <div class="card-body">
+                                <!-- bar chart -->
+                                <div id="container">
+                                    <canvas id="barchart"></canvas>
+                                </div>
+                                <!-- //bar chart -->
+                            </div>
+                            <div class="card-footer text-muted chart-grid__footer">
+                                <p id="foter1"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pl-lg-2 chart-grid">
+                        <div class="card text-center card_border">
+                            <div class="card-header chart-grid__header text-dark">
+                                <p id="foter1"></p>
+                                Kondisi Suhu Ruangan
+                            </div>
+                            <div class="card-body">
+                                <!-- line chart -->
+                                <div id="container">
+                                    <canvas id="linechart"></canvas>
+                                </div>
+                                <!-- //line chart -->
+                            </div>
+                            <div class="card-footer text-muted chart-grid__footer">
+                               <p id="foter2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //charts -->
+
+            <!-- //Sensor -->
+            <div class="card card_border p-lg-5 p-3 mb-4">
+                <div class="card-body py-3 p-0">
+                    <h3 class="block__title mb-lg-4 text-center">Sensor & Microcontroller</h3>
+                    <div class="row">
+                        <div class="col-md-4 column mt-md-3 mt-3">
+                            <a href="#img1"><img class="img-fluid rounded" src="assets/images/huma.png" alt=""></a>
+                            <a href="#para1">
+                                <p class="grid-para text-justify">Mengukur temperatur ruangan & kelembapan ruangan</p>
+                            </a>
+                            <a href="#caption1">
+                                <h3 class="paragraph font-weight-bold text-dark text-center">DHT11</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4 column mt-md-3 mt-5">
+                            <a href="#img1"><img class="img-fluid rounded" src="assets/images/humt.png" alt=""></a>
+                            <a href="#para2">
+                                <p class="grid-para">Mengukur tingkat kelembapan media tnaman jamur tiram</p>
+                            </a>
+                            <a href="#caption2">
+                                <h3 class="paragraph font-weight-bold text-dark text-center">FC-28</h3>
+                            </a>
+                        </div>
+                        <div class="col-md-4 column mt-md-3 mt-5">
+                            <a href="#img1"><img class="img-fluid rounded" src="assets/images/mic.png" alt=""></a>
+                            <a href="#para3">
+                                <p class="grid-para text-justify">Microcontroller & Pengirim data ke Database.</p>
+                            </a>
+                            <a href="#caption3">
+                                <h3 class="paragraph font-weight-bold text-dark text-center">Arduino Uno & ESP8266</h3>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- accordions -->
+            <div class="accordions">
+                <div class="row">
+                    <!-- accordion style 1 -->
+                    <div class="col-lg-12 mb-4">
+                        <div class="card card_border">
+                            <div class="card-header chart-grid__header text-dark font-weight-bold">
+                                Monitoring & Penunjang Kualitas Jamur Tiram
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header bg-white p-0" id="headingOne">
+                                            <a href="#" class="card__title p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Kenapa Berbasis IoT</a>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <table class="table table-striped">
+                                                <h3 class="text-center">Tabel Parameter Ideal Jamur Tiram</h3>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No</th>
+                                                        <th scope="col">Indikator</th>
+                                                        <th scope="col">Nilai</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Temperatur Ruangan</td>
+                                                        <td id="suhuuuz"> &deg;C</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Kelembapan Ruangan</td>
+                                                        <td id="kelembapannnz">%</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Kelembapan Tanah</td>
+                                                        <td id="kelembapannz">70 %</td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-center text-dark">Sumber : S. Waluyo dkk./Agritech</p>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header bg-white p-0" id="headingTwoo">
+                                                <a href="#" class="card__title p-3" data-toggle="collapse" data-target="#collapseTwoo" aria-expanded="false" aria-controls="collapseTwoo">Lokasi</a>
+                                            </div>
+                                            <div id="collapseTwoo" class="collapse" aria-labelledby="headingTwoo" data-parent="#accordionExample">
+                                                <div class="card-body para__style">
+                                                    <table class="table table-striped ">
+                                                <h3 class="text-center">Lokasi 1</h3>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No</th>
+                                                        <th scope="col">Indikator</th>
+                                                        <th scope="col">Nilai</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Temperatur Ruangan</td>
+                                                        <td id="suhuuu1z"> &deg;C</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Kelembapan Ruangan</td>
+                                                        <td id="kelembapannn1z">%</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Kelembapan Tanah</td>
+                                                        <td id="kelembapann1z">70 %</td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-center text-dark">Updated Now</p>
+                                        </div>
+
+                                         <div class="card-body para__style">
+                                                    <table class="table table-striped">
+                                                <h3 class="text-center">Lokasi 2</h3>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No</th>
+                                                        <th scope="col">Indikator</th>
+                                                        <th scope="col">Nilai</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Temperatur Ruangan</td>
+                                                        <td id="suhuuu2z"> &deg;C</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Kelembapan Ruangan</td>
+                                                        <td id="kelembapannn2z">%</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Kelembapan Tanah</td>
+                                                        <td id="kelembapann2z">70 %</td>
+
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-center text-dark">Updated Now</p>
+                                        </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="card">
+                                            <div class="card-header bg-white p-0" id="headingTwo">
+                                                <a href="#" class="card__title p-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Monitoring Jamur Tiram</a>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                <div class="card-body para__style">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header bg-white p-0" id="headingThree">
+                                                <a href="#" class="card__title p-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Kesimpulan</a>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body para__style">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //accordion style 1 -->
+                    </div>
+                </div>
+                <!-- //accordions -->
+
+
+                <!-- extra -->
+<div class="card">
+    <div class="row">
+        <div class="col-md-8 col-center m-auto bg-white">
+            <h2>Testimonials</h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Carousel -->
+                <div class="carousel-inner">
+                    <div class="item carousel-item active">
+                        <div class="img-box"><img src="alfian.jpg"></div>
+                        <p class="testimonial">Diharapkan dengan adanya Alat & Website ini,dapat membantu menunjang,kualitas pertumbuhan Jamur Tiram serta dapat meningkatkan hasil panen sehingga dapat memenuhi permintaan Import maupun Export .</p>
+                        <p class="overview"><b>Alfian Firdaus D</b>, Web & Database</p>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="img-box"><img src="mike.jpg" alt=""></div>
+                        <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+                        <p class="overview"><b>Yan Michael P</b>, Alat & Database</p>
+                    </div>
+                    <div class="item carousel-item">
+                        <div class="img-box"><img src="pakat.jpg" alt=""></div>
+                        <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+                        <p class="overview"><b>Ahmad Tri Hanuranto</b>, Pembimbing 1</p>
+                    </div>
+                
+                 <div class="item carousel-item">
+                        <div class="img-box"><img src="https://i.ibb.co/Trv7hDv/img3.jpg" alt=""></div>
+                        <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+                        <p class="overview"><b>Sofia Naning Hertiana</b>, Pembimbing 2</p>
+                    </div>
+                
+                    </div>
+                <!-- Carousel Controls -->
+                <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    <!-- slider carrousel mike & alfian-->
+             
+</body>
+
+
+    <!--footer section start-->
+    <footer class="dashboard">
+        <p>Website Monitoring Jamur Tiram Berbasis IoT </p>
+    </footer>
+    <!--footer section end-->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+
+
+    <script>
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- /move top -->
+
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
+
+    <!-- chart js -->
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <!-- //chart js -->
+
+
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+    <!-- close script -->
+    <script>
+        var closebtns = document.getElementsByClassName("close-grid");
+        var i;
+
+        for (i = 0; i < closebtns.length; i++) {
+            closebtns[i].addEventListener("click", function() {
+                this.parentElement.style.display = 'none';
+            });
+        }
+    </script>
+    <!-- //close script -->
+
+    <!-- disable body scroll when navbar is in active -->
+    <script>
+        $(function() {
+            $('.sidebar-menu-collapsed').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- disable body scroll when navbar is in active -->
+
+    <!-- loading-gif Js -->
+    <script src="./assets/js/modernizr.js"></script>
+    <script>
+        $(window).load(function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+
+    <script>
+    
+    var botn = document.getElementsByClassName("botn");
+    var slide = document.getElementById("slide");
+
+            botn[0].onclick =function(){
+            slide.style.transform = "translateX(0px)";
+            for(i=0;i<3;i++){
+                botn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+            botn[1].onclick =function(){
+            slide.style.transform = "translateX(-800px)";
+            for(i=0;i<3;i++){
+                botn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+            botn[2].onclick =function(){
+            slide.style.transform = "translateX(-1600px)";
+            for(i=0;i<3;i++){
+                botn[i].classList.remove("active");
+            }
+             this.classList.add("active");
+        }    
+        
+
+        
+</script>
+    <!--// loading-gif Js -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCzBL8GXiDxPfWsr2YaCx8aRk0HeBebUUg",
+            authDomain: "iotta-9bb21.firebaseapp.com",
+            databaseURL: "https://iotta-9bb21-default-rtdb.firebaseio.com",
+            projectId: "iotta-9bb21",
+            storageBucket: "iotta-9bb21.appspot.com",
+            messagingSenderId: "1033609355724",
+            appId: "1:1033609355724:web:4cd7d1b9e6e88bb94bfd69",
+            measurementId: "G-XGF4GVC5QD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+        //tombol
+
+        //tabel ketetapan
+        var ref = firebase.database().ref();
+          
+          ref.on("value", function(snapshot) {
+            data = snapshot.val();
+            
+          
+
+
+           var ref  = document.getElementById("truangan1").innerHTML = data.Lokasi.Lokasi1.Suhu_Ruangan;
+
+           var ref  = document.getElementById("kmediatanam1").innerHTML = data.Lokasi.Lokasi1.Kelembaban_Media_Tanam;
+
+           var ref  = document.getElementById("kruangan1").innerHTML = data.Lokasi.Lokasi1.Kelembaban_Ruangan;
+
+           var ref  = document.getElementById("truangan2").innerHTML = data.Lokasi.Lokasi2.Suhu_Ruangan;
+
+           var ref  = document.getElementById("kmediatanam2").innerHTML = data.Lokasi.Lokasi2.Kelembaban_Media_Tanam;
+
+           var ref  = document.getElementById("kruangan2").innerHTML = data.Lokasi.Lokasi2.Kelembaban_Ruangan;
+           //kondisi pompa
+            var ref  = document.getElementById("foter1").innerHTML = data.Lokasi.Lokasi1.Keadaan;
+            var ref  = document.getElementById("foter2").innerHTML = data.Lokasi.Lokasi1.Keadaan;
+            //ketetapan
+          var ref  = document.getElementById("kelembapannnz").innerHTML = data.Ketetapan.Kelembapan;
+          var ref  = document.getElementById("kelembapannz").innerHTML = data.Ketetapan.Kelembapan2;
+           var ref  = document.getElementById("suhuuuz").innerHTML = data.Ketetapan.Temperatur;
+        });
+
+        
+
+          
+
+        // firebase.on('child_changed', function(snaptshot) {
+        // });
+
+        function on(){
+    nyala.set({relai: 1});
+  }
+
+  function off(){
+    nyala.set({relai: 0});
+  }
+
+        var database = firebase.database();
+
+        var nyala = firebase.database().ref();
+        var ref = firebase.database().ref();
+
+        var title_kelembapan = ["Kelembapan Ruangan 1", "Kelembapan Ruangan 2"];
+        var title_suhu = ["Suhu Ruangan 1", "Suhu Ruangan 2"];
+        var ref = firebase.database().ref();
+        var title
+        // Kelembapan Ruangan 1
+        let _labels = [];
+        let dataKR1 = [];
+        var urlRefKelembaban_Ruangan1 = ref.child("Sensor/DHT11/Kelembaban_Ruangan1");
+        urlRefKelembaban_Ruangan1.on("value", function(snapshot) {
+            var keyKR1;
+            var i = 1;
+            snapshot.forEach(function(child) {
+                keyKR1 = child.val();
+                var vkelembapan1 = child.val().split("%");
+                _labels = [..._labels, i.toString()];
+                dataKR1 = [...dataKR1, parseInt(vkelembapan1[0])];
+                // dataKR1.push(parseInt(vkelembapan1[0]))
+                // _labels.push(i);
+                i++;
+            });
+            document.getElementById("kruangan1").innerHTML = keyKR1;
+        });
+        console.log(dataKR1);
+        console.log(_labels);
+
+
+      
+
+        // Kelembapan Ruangan 2
+        let _labels2 = [];
+        var dataKR2 = [];
+        var urlRefKelembaban_Ruangan2 = ref.child("Sensor/DHT11/Kelembaban_Ruangan2");
+        urlRefKelembaban_Ruangan2.on("value", function(snapshot) {
+            var keyKR2;
+            var i = 1;
+            snapshot.forEach(function(child) {
+                keyKR2 = child.val();
+                var vkelembapan2 = child.val().split("%");
+                // dataKR2.push(parseInt(vkelembapan2[0]))
+                _labels2 = [..._labels2, i.toString()];
+                dataKR2 = [...dataKR2, parseInt(vkelembapan2[0])];
+                i++;
+            });
+            console.log(dataKR2);
+            document.getElementById("kruangan2").innerHTML = keyKR2;
+            new Chart(document.getElementById("barchart"), {
+                type: 'bar',
+                data: {
+                    labels: _labels,
+                    datasets: [{
+                        data: dataKR1,
+                        label: 'Kelembapan Ruangan 1',
+                        backgroundColor: "#4755AB",
+                        borderWidth: 1,
+                    }, {
+                        data: dataKR2,
+                        label: 'Kelembapan Ruangan 2',
+                        backgroundColor: "#E7EDF6",
+                        borderWidth: 1,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    scales: {
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: '%'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                }
+            });
+        });
+        console.log(dataKR2);
+
+        // Temperatur Ruangan 1
+        var dataTR1 = [];
+        var urlRefTemperatur_Ruangan1 = ref.child("Sensor/DHT11/Temperatur_Ruangan1");
+        urlRefTemperatur_Ruangan1.on("value", function(snapshot) {
+            var keyKR1;
+            snapshot.forEach(function(child) {
+                keyKR1 = child.val();
+                var vkelembapan1 = child.val().split("°");
+                dataTR1.push(parseInt(vkelembapan1[0]))
+            });
+            document.getElementById("truangan1").innerHTML = keyKR1;
+        });
+
+        // Temperatur Ruangan 2
+        var dataTR2 = [];
+        var urlRefTemperatur_Ruangan2 = ref.child("Sensor/DHT11/Temperatur_Ruangan2");
+        urlRefTemperatur_Ruangan2.on("value", function(snapshot) {
+            var keyKR2;
+            snapshot.forEach(function(child) {
+                keyKR2 = child.val();
+                var vkelembapan2 = child.val().split("°");
+                dataTR2.push(parseInt(vkelembapan2[0]))
+            });
+            new Chart(document.getElementById("linechart"), {
+                type: 'line',
+                data: {
+                    labels: _labels,
+                    datasets: [{
+                        label: 'Suhu Ruangan 1',
+                        backgroundColor: window.chartColors.navy,
+                        borderColor: window.chartColors.navy,
+                        data: dataTR1,
+                        fill: false,
+                    }, {
+                        label: 'Suhu Ruangan 2',
+                        fill: false,
+                        backgroundColor: window.chartColors.purple,
+                        borderColor: window.chartColors.purple,
+                        data: dataTR2,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    // title: {
+                    // 	display: true,
+                    // 	text: 'Chart.js Line Chart'
+                    // },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    hover: {
+                        mode: 'nearest',
+                        intersect: true
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }],
+                        yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: '°C'
+                            },
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+            document.getElementById("truangan2").innerHTML = keyKR2;
+        });
+
+        // Kelembapan Media Tanam 1
+        var dataKMT1 = [];
+        var urlRefMediaTanam1 = ref.child("Sensor/FC28/Kelembaban_Media_Tanam1");
+        urlRefMediaTanam1.on("value", function(snapshot) {
+            var keyKR1;
+            snapshot.forEach(function(child) {
+                keyKR1 = child.val();
+                var vkelembapan1 = child.val().split("%");
+                dataKMT1.push(parseInt(vkelembapan1[0]))
+            });
+            document.getElementById("kmediatanam1").innerHTML = keyKR1;
+        });
+
+        // Kelembapan Media Tanam 2
+        var dataKMT2 = [];
+        var urlRefMediaTanam2 = ref.child("Sensor/FC28/Kelembaban_Media_Tanam2");
+        urlRefMediaTanam2.on("value", function(snapshot) {
+            var keyKR1;
+            snapshot.forEach(function(child) {
+                keyKR1 = child.val();
+                var vkelembapan1 = child.val().split("%");
+                dataKMT2.push(parseInt(vkelembapan1[0]))
+            });
+            document.getElementById("kmediatanam2").innerHTML = keyKR1;
+        });
+
+
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (!user) {
+                window.location.href = "login.html";
+            }
+        });
+
+        function signOut() {
+            firebase.auth().signOut().then(function() {
+                // Sign-out successful.
+                alert
+                swal({
+                    type: 'successfull',
+                    title: 'Signed Out',
+                }).then((value) => {
+                    setTimeout(function() {
+                        window.location.replace("login.html");
+                    }, 1000)
+                });
+            }).catch(function(error) {
+                // An error happened.
+                let errorMessage = error.message;
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: "Error",
+                })
+            });
+        }
+    </script>
+
+    <!-- Different scripts of charts.  Ex.Barchart, Linechart -->
+    <!-- <script src="assets/js/bar.js"></script> -->
+    <!-- <script src="assets/js/linechart.js"></script> -->
+    <!-- //Different scripts of charts.  Ex.Barchart, Linechart -->
+
+</body>
+
+</html>

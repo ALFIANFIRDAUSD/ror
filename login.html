@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="ico/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="ico/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="ico/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="ico/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="ico/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="ico/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="ico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="ico/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="ico/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="ico/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="ico/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="ico/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="ico/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="ico/mstile-310x310.png" />
+    <title>Login Form Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <script src="assets/js/login.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+<body>
+  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+
+</body>
+
+    <div class="login-box">
+        <img src="teluu.png" class="avatar">
+        <h1>Login Here</h1>
+        <!-- <form> -->
+        <p>Eamil</p>
+        <input type="text" id="userSIEmail" placeholder="mail@mail.com" required>
+        <!-- <input type="text" name="Username" placeholder="Enter Username"> -->
+        <!-- <small id="userSIEmailError" class="form-text text-danger">Please check your login information.</small> -->
+
+        <p>Password</p>
+        <!-- <input type="Password" name="Password" placeholder="Enter Password"> -->
+        <input type="password" id="userSIPassword" placeholder="password" required>
+
+        <!-- <small id="userSIPasswordError" class="form-text text-danger">Please check your password.</small> -->
+
+        <button type="button" class="btn" onclick="signIn()">Sign In</button>
+
+
+        <!-- </form> -->
+
+    </div>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCzBL8GXiDxPfWsr2YaCx8aRk0HeBebUUg",
+            authDomain: "iotta-9bb21.firebaseapp.com",
+            databaseURL: "https://iotta-9bb21-default-rtdb.firebaseio.com",
+            projectId: "iotta-9bb21",
+            storageBucket: "iotta-9bb21.appspot.com",
+            messagingSenderId: "1033609355724",
+            appId: "1:1033609355724:web:4cd7d1b9e6e88bb94bfd69",
+            measurementId: "G-XGF4GVC5QD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        function signIn() {
+            var userSIEmail = document.getElementById("userSIEmail").value;
+            var userSIPassword = document.getElementById("userSIPassword").value;
+
+            if (userSIEmail == "" || userSIPassword == "") {
+                alert("Email atau username tidak boleh kosong");
+            } else {
+                firebase.auth().signInWithEmailAndPassword(userSIEmail, userSIPassword).then((success) => {
+                    swal({
+                        type: 'successfull',
+                        title: 'Succesfully signed in',
+                    }).then((value) => {
+                        setTimeout(function() {
+                            window.location.replace("index.html");
+                        }, 1000)
+                    });
+                }).catch((error) => {
+                    // Handle Errors here.
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    swal({
+                        type: 'error',
+                        title: 'Error',
+                        text: "Error",
+                    })
+                });
+            }
+        }
+    </script>
+    <!-- <script src="assets/js/login.js"></script> -->
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+
+</html>
